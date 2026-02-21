@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 // Configure base URL - update this with your actual backend URL
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:8000';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'https://biosense-rb5d.onrender.com';
 
 const apiClient = axios.create({
   baseURL: API_BASE_URL,
