@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-lavender-50 text-gray-800 font-sans antialiased;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-md border border-lavender-200/50;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-lavender-600 to-accent-purple bg-clip-text text-transparent;
+  }
+
+  .btn-primary {
+    @apply px-6 py-3 rounded-2xl font-medium text-white bg-gradient-to-r from-lavender-500 to-accent-purple 
+           hover:shadow-glow transition-all duration-300 hover:scale-105;
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-2xl font-medium text-lavender-700 bg-white border-2 border-lavender-300
+           hover:bg-lavender-50 transition-all duration-300;
+  }
+
+  .input-field {
+    @apply w-full px-4 py-3 rounded-xl border-2 border-lavender-200 bg-white/50 
+           focus:border-lavender-400 focus:outline-none focus:ring-2 focus:ring-lavender-300/50
+           transition-all duration-200;
+  }
+
+  .toggle-switch {
+    @apply relative inline-flex h-6 w-11 items-center rounded-full transition-colors
+           focus:outline-none focus:ring-2 focus:ring-lavender-400 focus:ring-offset-2;
+  }
+
+  .floating-blob {
+    @apply absolute rounded-full blur-3xl opacity-30 animate-float;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8F4FF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #CDB4DB;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B8A4E3;
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Loading spinner animation */
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+/* Gradient background effect */
+.gradient-bg {
+  background: radial-gradient(circle at 20% 30%, rgba(205, 180, 219, 0.15) 0%, transparent 50%),
+              radial-gradient(circle at 80% 70%, rgba(184, 164, 227, 0.15) 0%, transparent 50%);
+}
